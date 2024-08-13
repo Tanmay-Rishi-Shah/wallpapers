@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_above="@+id/nativeLay"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/theam"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+
+            <TextView
+                android:id="@+id/saveLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:paddingStart="16dp"
+                android:paddingTop="12dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="12dp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                android:textColor="?attr/primaryTextColor"
+                android:textSize="14sp"
+                android:fontFamily="@font/roboto_bold" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:descendantFocusability="beforeDescendants"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/wrapper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad_16dp"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/pad_24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/nameLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="@dimen/pad_16dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:text="@string/name"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/nameEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        android:ems="10"
+                        android:hint="@string/wallet_name_hint"
+                        android:inputType="textCapSentences"
+                        android:maxLength="30"
+                        android:paddingStart="0dp"
+                        android:paddingEnd="0dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+                    <TextView
+                        android:id="@+id/typeLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/type"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+                    <FrameLayout
+                        android:id="@+id/typeWrapper"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/typeLabel">
+
+                        <Spinner
+                            android:id="@+id/typeSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-8dp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/amountLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:text="@string/initial_amount"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/typeWrapper" />
+
+                    <EditText
+                        android:id="@+id/amountEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        android:drawableEnd="?attr/editTextCaret"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:paddingEnd="16dp"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/amountLabel" />
+
+                    <TextView
+                        android:id="@+id/colorLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/color"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/amountEditText" />
+
+                    <FrameLayout
+                        android:id="@+id/colorSpinnerWrapper"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_12dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline17"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/colorLabel">
+
+                        <Spinner
+                            android:id="@+id/colorSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-8dp" />
+                    </FrameLayout>
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.7" />
+
+                    <TextView
+                        android:id="@+id/iconLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_12dp"
+                        android:text="@string/icon"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="@+id/guideline17"
+                        app:layout_constraintTop_toTopOf="@+id/colorLabel" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_12dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline17"
+                        app:layout_constraintTop_toBottomOf="@+id/iconLabel">
+
+                        <ImageView
+                            android:id="@+id/iconView"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/wallet_0"
+                            app:tint="?attr/primaryTextColor" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/currencyLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/currency"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/colorSpinnerWrapper" />
+
+                    <FrameLayout
+                        android:id="@+id/currencySpinnerWrapper"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/currencyLabel">
+
+                        <Spinner
+                            android:id="@+id/currencySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-8dp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/rateLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="8dp"
+                        android:text="1.00 GBP = 5.63 MYR"
+                        android:textColor="?attr/secondaryTextColor"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/currencySpinnerWrapper" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="?attr/seperator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wrapper" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/repeatWrapper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad_16dp"
+                    android:layout_marginBottom="@dimen/pad_16dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wrapper">
+
+                    <TextView
+                        android:id="@+id/repeatLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="@dimen/pad_16dp"
+                        android:text="@string/wallet_exclude_title"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="@dimen/pad_16dp"
+                        android:text="@string/wallet_exclude_hint"
+                        android:textColor="?attr/secondaryTextColor"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/switchView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/repeatLabel" />
+
+                    <Switch
+                        android:id="@+id/switchView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/pad_16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="?attr/seperator"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/creditDateWrapper"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/pad_16dp"
+                    android:layout_marginBottom="@dimen/pad_16dp"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wrapper">
+
+                    <TextView
+                        android:id="@+id/statementDateLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/statement_day"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <FrameLayout
+                        android:id="@+id/statementDateWrapper"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/statementDateLabel">
+
+                        <Spinner
+                            android:id="@+id/statementDateSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-8dp" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/dueDateLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/due_day"
+                        android:textColor="?attr/primaryTextColor"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/roboto_bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/statementDateWrapper" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/full_screen_edit_text_height"
+                        android:layout_marginStart="@dimen/pad_24dp"
+                        android:layout_marginEnd="@dimen/pad_24dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/background_edit_text_drawable"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/dueDateLabel">
+
+                        <Spinner
+                            android:id="@+id/dueDateSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="-8dp" />
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="?attr/seperator"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/nativeLay"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" />
+</RelativeLayout>

@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/baseline_search_24"
+        android:title="Search"
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+    <item
+        android:id="@+id/action_about_app"
+        android:title="About App"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_contact_us"
+        android:title="Contact Us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_rate_us"
+        android:title="Rate Us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_privacy_policy"
+        android:title="Privacy Policy"
+        app:showAsAction="never" />
+</menu>

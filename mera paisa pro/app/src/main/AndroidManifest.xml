@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+        <intent>
+            <action android:name="com.android.vending.billing.InAppBillingService.BIND" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <permission
+        android:name="com.expance.merapaisa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.ktwapps.walletmanager.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:name=".AppEngine"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/widget_logo"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/widget_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".New_SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GetStart2"
+            android:exported="false" />
+        <activity
+            android:name=".GetStart"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <activity
+            android:name=".BaseActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ArchivedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateSubcategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageSubcategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TemplatePicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateTemplate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageTemplate"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateGoalTrans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingPasscode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Premium"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RecurringDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletTransactionOverview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletTransactionPie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransactionPie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransactionOverview"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletStatisticPie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateDebtTrans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletCategoryTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletStatistic"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletMultiplePicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageRecurring"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateRecurring"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletPicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BudgetExpanded"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatisticPie"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CurrencyPicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BackUpSDCard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BackUpGDrive"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CategoryIconPicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletIconPicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCurrency"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Currency"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CategoryMultiplePicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Search"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateWallet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Calculator"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CategoryPicker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BudgetTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateBudget"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateDebt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateGoal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageBudget"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageGoal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CreateCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalletTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageWallet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ManageDebt"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BudgetDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DebtDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoalDetail"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditAccount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditTransaction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PhotoViewer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccountCreateCurrency"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AccountCreateAmount"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WalkThrough"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatisticWeekly"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TransactionWeekly"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Export"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Passcode"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SetPasscode" />
+        <activity
+            android:name=".MonthlyPicker"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Floating" />
+        <activity
+            android:name=".AccountCreateName"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.expance.merapaisa.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <receiver
+            android:name=".MainWidgetProvider"
+            android:exported="false"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+    </application>
+
+</manifest>

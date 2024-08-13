@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/hintLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_passcode"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/background_fingerprint"
+        android:backgroundTint="?attr/buttonDisabled"
+        app:layout_constraintEnd_toStartOf="@+id/bullet2Wrapper"
+        app:layout_constraintTop_toBottomOf="@+id/hintLabel">
+
+        <View
+            android:id="@+id/bullet1"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/background_fingerprint"
+            android:backgroundTint="?attr/buttonDisabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bullet2Wrapper"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/background_fingerprint"
+        android:backgroundTint="?attr/buttonDisabled"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/hintLabel">
+
+        <View
+            android:id="@+id/bullet2"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/background_fingerprint"
+            android:backgroundTint="?attr/buttonDisabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bullet3Wrapper"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_fingerprint"
+        android:backgroundTint="?attr/buttonDisabled"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/hintLabel">
+
+        <View
+            android:id="@+id/bullet3"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/background_fingerprint"
+            android:backgroundTint="?attr/buttonDisabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/background_fingerprint"
+        android:backgroundTint="?attr/buttonDisabled"
+        app:layout_constraintStart_toEndOf="@+id/bullet3Wrapper"
+        app:layout_constraintTop_toBottomOf="@+id/hintLabel">
+
+        <View
+            android:id="@+id/bullet4"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:background="@drawable/background_fingerprint"
+            android:backgroundTint="?attr/buttonDisabled"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/one"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="1"
+        android:text="1"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/four"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/four"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="4"
+        android:text="4"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/seven"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/seven"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:layout_marginBottom="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="7"
+        android:text="7"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/two"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="2"
+        android:text="2"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/five"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/five"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="5"
+        android:text="5"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/eight"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/eight"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="8"
+        android:text="8"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/zero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <Button
+        android:id="@+id/three"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="3"
+        android:text="3"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/six"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
+
+    <Button
+        android:id="@+id/six"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="6"
+        android:text="6"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/nine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
+
+    <Button
+        android:id="@+id/nine"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="9"
+        android:text="9"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12" />
+
+    <Button
+        android:id="@+id/zero"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:background="@drawable/background_passcode_button"
+        android:tag="0"
+        android:text="0"
+        android:textColor="?attr/primaryTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+    <ImageButton
+        android:id="@+id/clear"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/keyboard_number_height"
+        android:adjustViewBounds="true"
+        android:background="@drawable/background_passcode_button"
+        android:contentDescription="@string/escape"
+        android:cropToPadding="false"
+        android:elevation="0dp"
+        android:tint="?attr/primaryTextColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline12"
+        app:srcCompat="@drawable/escape" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3333" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6667" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.075" />
+
+    <ImageView
+        android:id="@+id/fingerprintImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_fingerprint"
+        app:layout_constraintBottom_toTopOf="@+id/two"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/bullet3Wrapper"
+        app:srcCompat="@drawable/fingerprint" />
+</androidx.constraintlayout.widget.ConstraintLayout>

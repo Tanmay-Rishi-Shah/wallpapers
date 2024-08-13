@@ -1,0 +1,38 @@
+<!-- res/layout/menu_layout.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Menu (Toolbar) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#000040"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Cricket Wallpapers"
+        app:titleTextColor="@android:color/white"
+        android:layout_alignParentTop="true"
+        android:elevation="4dp" />
+
+    <!-- Main Content Area -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/toolbar"
+        android:layout_above="@id/bottom_navigation" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemTextColor="@color/selector_nav_item_color"
+        app:itemIconTint="@color/selector_nav_item_color"
+        android:background="@color/black"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>

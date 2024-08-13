@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#000010"
+    tools:context=".UserDashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tower Details (User)"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="16dp" />
+
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="22dp"
+            android:text="Logout" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center">
+
+        <!-- Tower Buttons -->
+        <Button
+            android:id="@+id/towerA1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="A"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/towerA2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="B"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/towerA3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="C"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/towerA4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="D"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/towerA5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="E"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/towerA6"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="F"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/towerA7"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="G"
+            android:textSize="24sp"
+            android:layout_margin="8dp" />
+
+    </GridLayout>
+
+
+</LinearLayout>

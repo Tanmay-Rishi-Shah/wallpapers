@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OV FLATS</string>
+    <string-array name="occupied_options">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>

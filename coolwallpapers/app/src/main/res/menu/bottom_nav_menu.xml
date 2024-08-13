@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_wallpapers"
+        android:icon="@drawable/gallery"
+        android:title="Wallpapers" />
+    <item
+        android:id="@+id/nav_categories"
+        android:icon="@drawable/category"
+        android:title="Categories" />
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/like"
+        android:title="Favorites" />
+</menu>

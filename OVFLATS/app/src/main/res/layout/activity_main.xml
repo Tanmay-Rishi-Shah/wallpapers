@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/logo"
+        android:contentDescription="Logo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="481dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rounded_border"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:weightSum="2">
+
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/tanmay"
+            android:padding="16dp"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="16dp"
+            android:text="O&amp;V Flats offers luxurious, high-end rental properties tailored for affluent clients, ensuring exceptional comfort, exclusivity, and premium service in prime locations. Experience opulent living with O&amp;V Flats."
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/adminBtn"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#000"
+                android:text="Admin"
+                android:textColor="#FFF"
+                android:textSize="18dp" />
+
+            <Button
+                android:id="@+id/userBtn"
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#FFF"
+                android:text="User"
+                android:textColor="#000"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

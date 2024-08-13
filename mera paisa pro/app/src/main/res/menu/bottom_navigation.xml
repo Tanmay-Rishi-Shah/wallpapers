@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_transaction"
+        android:icon="@drawable/transaction"
+        android:title="@string/transaction" />
+    <item
+        android:id="@+id/action_calender"
+        android:icon="@drawable/calendar"
+        android:title="@string/calendar" />
+    <item
+        android:id="@+id/action_statistic"
+        android:icon="@drawable/statistic"
+        android:title="@string/statistic" />
+    <item
+        android:id="@+id/action_wallet"
+        android:icon="@drawable/wallet"
+        android:title="@string/wallet" />
+</menu>

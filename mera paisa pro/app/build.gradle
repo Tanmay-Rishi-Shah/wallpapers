@@ -1,0 +1,87 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.expance.merapaisa'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.expance.merapaisa"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude "META-INF/DEPENDENCIES"
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.android.gms:play-services-ads-lite:22.0.0'
+    implementation 'com.google.android.gms:play-services-tasks:18.0.2'
+    implementation 'androidx.sqlite:sqlite:2.3.1'
+    implementation 'com.google.android.gms:play-services-measurement-api:21.2.2'
+    implementation 'androidx.constraintlayout:constraintlayout-core:1.0.4'
+    implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'com.android.billingclient:billing:6.0.0'
+    implementation 'androidx.exifinterface:exifinterface:1.3.6'
+    implementation 'androidx.lifecycle:lifecycle-process:2.6.1'
+    implementation 'androidx.core:core-splashscreen:1.0.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.apache.commons:commons-lang3:3.5'
+    implementation 'com.github.lzyzsd:circleprogress:1.0.3'
+    implementation 'com.opencsv:opencsv:3.8'
+    implementation group: 'org.apache.httpcomponents', name: 'httpcore', version: '4.4.15'
+    implementation group: 'com.google.http-client', name: 'google-http-client', version: '1.39.2-sp.1'
+    implementation group: 'com.google.apis', name: 'google-api-services-drive', version: 'v3-rev110-1.23.0'
+    implementation "androidx.room:room-guava:2.5.1"
+    implementation group: 'com.google.http-client', name: 'google-http-client-android', version: '1.26.0'
+    implementation group: 'com.google.api-client', name: 'google-api-client-android', version: '1.26.0'
+    implementation group: 'com.google.http-client', name: 'google-http-client-gson', version: '1.26.0'
+    implementation group: 'com.udojava', name: 'EvalEx', version: '1.10'
+    implementation 'com.github.faruktoptas:FancyShowCaseView:1.3.9'
+    implementation 'me.grantland:autofittextview:0.2.1'
+    implementation('org.apache.poi:poi-ooxml:3.17') { exclude group: 'org.apache.xmlbeans', module: 'xmlbeans' }
+    implementation group: 'org.apache.xmlbeans', name: 'xmlbeans', version: '3.1.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation project(path: ':ads')
+
+    implementation 'com.airbnb.android:lottie:4.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    dependencies {
+        constraints {
+            implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {
+                because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+            }
+            implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0") {
+                because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+            }
+        }
+    }
+}

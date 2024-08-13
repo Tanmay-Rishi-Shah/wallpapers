@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/pro" android:id="@+id/menu_action_pro" android:title="@string/pro_button" app:showAsAction="always"/>
+    <item android:icon="@drawable/bar" android:id="@+id/menu_action_weekly_spending" android:title="@string/weekly_spending" app:showAsAction="always"/>
+    <item android:icon="@drawable/date" android:id="@+id/menu_action_date_mode" android:title="@string/date_mode" app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "70552791970",
+    "project_id": "ovflats",
+    "storage_bucket": "ovflats.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70552791970:android:b744cdee5242f38db8a0fb",
+        "android_client_info": {
+          "package_name": "com.example.ovflats"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1mpd5Ty93XUHvfMejvgRylx70MH96Qnw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

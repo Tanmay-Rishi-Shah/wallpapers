@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RadioGroup android:id="@+id/radioGroup" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RadioButton android:textSize="16sp" android:id="@+id/radioButton" android:background="@null" android:clickable="false" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="@dimen/pad_8dp" android:layout_marginBottom="@dimen/pad_8dp" android:text="@string/monday" android:paddingStart="@dimen/pad_8dp" android:paddingEnd="0dp" android:layout_marginStart="@dimen/pad_20dp" android:layout_marginEnd="@dimen/pad_20dp"/>
+    </RadioGroup>
+</LinearLayout>

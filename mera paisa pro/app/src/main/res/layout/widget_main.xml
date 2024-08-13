@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal" android:background="@color/widget_background" android:layout_width="match_parent" android:layout_height="48dp">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/widget_logo"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/incomeButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/widget_income"/>
+            <TextView android:textSize="15sp" android:textColor="#eeeeee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/income" android:maxLines="1" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:background="#ffffff" android:layout_width="1dp" android:layout_height="20dp" android:layout_marginTop="14dp"/>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/expenseButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:padding="4dp" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/widget_expense"/>
+            <TextView android:textSize="15sp" android:textColor="#eeeeee" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/expense" android:maxLines="1" android:layout_marginStart="6dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
